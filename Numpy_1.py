@@ -10,7 +10,6 @@ with open("Stock_1.csv", "r", encoding="utf-8") as f:
     reader = csv.DictReader(f) #DictReader = 用欄位名稱讀 CSV
 
     for row in reader:
-        products.append(row["Product_Name"])
         price.append(float(row["Price"]))
         stock.append([float(row["Stock_A"]),float(row["Stock_B"]),float(row["Stock_C"])])
         discount.append(float(row["Discount"]))
